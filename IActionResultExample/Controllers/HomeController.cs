@@ -18,9 +18,7 @@ namespace IActionResultExample.Controllers
             }
             else
             {
-                Response.StatusCode = 400;
-
-                return Content("not valid querystring.", "text/plain");
+                return BadRequest("Invalid request parameters.");
             }
         }
 
